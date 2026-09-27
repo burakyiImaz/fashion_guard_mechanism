@@ -1,0 +1,29 @@
+# Runpod Project Configuration
+
+
+title = "fashion-storage"
+
+[project]
+uuid = "3b5c7c2b"
+name = "fashion-storage"
+base_image = "runpod/base:0.4.3-cuda12.1.0"
+gpu_types = ["NVIDIA RTX A4000", "NVIDIA RTX A4500", "NVIDIA RTX A5000", "NVIDIA GeForce RTX 3090", "NVIDIA RTX A6000"]
+gpu_count = 1
+storage_id = "umcn4bbu11"
+volume_mount_path = "/runpod-volume"
+ports = "8080/http, 22/tcp"
+container_disk_size_gb = 10
+
+[project.env_vars]
+POD_INACTIVITY_TIMEOUT = "120"
+RUNPOD_DEBUG_LEVEL = "debug"
+UVICORN_LOG_LEVEL = "warning"
+
+[template]
+model_type = "default"
+model_name = "None"
+
+[runtime]
+python_version = "3.10"
+handler_path = "src/handler.py"
+requirements_path = "builder/requirements.txt"

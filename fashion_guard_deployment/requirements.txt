@@ -1,0 +1,6 @@
+torch>=2.1
+transformers>=4.53,<5
+accelerate>=0.34
+langdetect>=1.0.9
+runpod>=0.10.0
+pytest>=7,<9

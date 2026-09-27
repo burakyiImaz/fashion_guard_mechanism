@@ -1,0 +1,6 @@
+model_name: Qwen/Qwen3-4B-Instruct-2507
+max_chars: 4000
+max_new_tokens: 20
+context_messages: 3
+language_detection: true
+route_uncertain_to_main_agent: true
